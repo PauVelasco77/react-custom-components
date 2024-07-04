@@ -9,6 +9,7 @@ const Example: FC<ButtonProps> = ({ text = "Button" }) => {
         justifyContent: "center",
         alignItems: "center",
         height: "100%",
+        width: "100%",
       }}
     >
       <Button text={text} />
