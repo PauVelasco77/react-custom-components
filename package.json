@@ -26,6 +26,13 @@
       "npm run test"
     ]
   },
+  "optionalDependencies": {
+    "fsevents": {
+      "os": [
+        "darwin"
+      ]
+    }
+  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@PauVelasco77"
   },
