@@ -27,7 +27,7 @@
     ]
   },
   "publishConfig": {
-    "@PauVelasco77:registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com/@PauVelasco77"
   },
   "keywords": [],
   "author": "PauVelasco77",
