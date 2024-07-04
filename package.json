@@ -9,6 +9,13 @@
   "files": [
     "/dist"
   ],
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "npm run format",
+      "npm run lint",
+      "npm run test"
+    ]
+  },
   "scripts": {
     "format": "prettier --write --parser typescript '**/*.{ts,tsx}'",
     "lint": "eslint . --ext .ts,.tsx --ignore-path .gitignore --fix",
@@ -17,7 +24,8 @@
     "test-watch": "vitest",
     "test:ui": "vitest --ui",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
@@ -43,7 +51,9 @@
     "eslint-plugin-react": "^7.34.3",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-storybook": "^0.8.0",
+    "husky": "^9.0.11",
     "jsdom": "^24.1.0",
+    "lint-staged": "^15.2.7",
     "prettier": "^3.3.2",
     "storybook": "^8.1.11",
     "typescript": "^5.5.3",
