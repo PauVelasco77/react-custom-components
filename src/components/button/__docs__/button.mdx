@@ -1,0 +1,33 @@
+import { Canvas, Meta } from "@storybook/blocks";
+import Example from "./example.tsx";
+import * as Button from "./button.stories.tsx";
+
+<Meta of={Button} title="Button" />
+
+# Button
+
+Button component with different props.
+
+#### Example
+
+<Canvas of={Button.Primary} />
+
+## Usage
+
+```ts
+import {Button} from "components-library";
+
+const Example = () => {
+  return (
+      <Button
+        text={"Press me"}
+      />
+  );
+};
+
+export default Example;
+```
+
+#### Arguments
+
+- **text** _`string`_ - A string that represents the text content of the button.
