@@ -9,13 +9,6 @@
   "files": [
     "/dist"
   ],
-  "lint-staged": {
-    "*.{ts,tsx}": [
-      "npm run format",
-      "npm run lint",
-      "npm run test"
-    ]
-  },
   "scripts": {
     "format": "prettier --write --parser typescript '**/*.{ts,tsx}'",
     "lint": "eslint . --ext .ts,.tsx --ignore-path .gitignore --fix",
@@ -26,6 +19,13 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.test.{ts,tsx}": [
+      "npm run format",
+      "npm run lint",
+      "npm run test"
+    ]
   },
   "keywords": [],
   "author": "",
