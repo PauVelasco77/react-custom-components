@@ -1,6 +1,6 @@
 {
   "name": "@pauvelasco77/pau-react-custom-components",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
@@ -58,6 +58,7 @@
     "lint-staged": "^15.2.7",
     "prettier": "^3.3.2",
     "storybook": "^8.1.11",
+    "storybook-css-modules": "^1.0.8",
     "typescript": "^5.5.3",
     "vite": "^5.3.3",
     "vite-plugin-dts": "^3.9.1",
@@ -66,7 +67,6 @@
   "peerDependencies": {
     "react": "^18.3.1"
   },
-  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PauVelasco77/react-custom-components.git"
