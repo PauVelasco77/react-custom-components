@@ -1,6 +1,6 @@
 {
   "name": "@pauvelasco77/pau-react-custom-components",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "type": "module",
   "main": "dist/main.cjs.js",
   "module": "dist/main.es.js",
