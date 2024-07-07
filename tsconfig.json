@@ -19,8 +19,16 @@
     "noUnusedLocals": true, // Flags unused local variables.
     "noUnusedParameters": true, // Flags unused function parameters.
     "noFallthroughCasesInSwitch": true, // Requires handling all cases in a switch statement.
-    "declaration": true // Generates declaration files for TypeScript.
+    "declaration": true, // Generates declaration files for TypeScript.
+    "allowJs": true, // Allows importing and using JavaScript files.
+    "checkJs": false // Disables type checking on JavaScript files (optional, based on project needs).
   },
-  "include": ["src", "lib"], // Specifies the directory to include when searching for TypeScript files.
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "lib"
+  ], // Specifies the directory to include when searching for TypeScript files.
   "exclude": ["src/**/__docs__", "src/**/__test__"]
 }
