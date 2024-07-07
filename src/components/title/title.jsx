@@ -1,5 +1,6 @@
-import styles from "./button.module.css";
+import styles from "./title.module.css";
 import PropTypes from "prop-types";
+import React from "react";
 
 export default function Title({ text, ...props }) {
   return (
