@@ -6,28 +6,27 @@ import * as Button from "./button.stories.tsx";
 
 # Button
 
-Button component with different props.
+The `Button` component is used to trigger actions and can be customized with various properties.
 
-#### Example
+## Examples
+
+### Default Example
 
 <Canvas of={Button.Primary} />
 
 ## Usage
 
-```ts
-import {Button} from "components-library";
+To use the `Button` component in your project, import it from the components library and use it as shown below:
+
+```tsx
+import { Button } from "components-library";
 
 const Example = () => {
   return (
-      <Button
-        text={"Press me"}
-      />
+    <Button
+      text="Press me"
+    />
   );
 };
 
 export default Example;
-```
-
-#### Arguments
-
-- **text** _`string`_ - A string that represents the text content of the button.

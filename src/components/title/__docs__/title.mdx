@@ -1,43 +1,33 @@
 import { Canvas, Meta } from "@storybook/blocks";
 import Example from "./example.tsx";
-import * as Title from "./title.stories.tsx";
+import * as Title from "./title.stories.jsx";
+import React from "react";
 
 <Meta of={Title} title="Title" />
 
 # Title
 
-Title component with different props.
+The `Title` component is used to display a title with various configurable properties.
 
-#### Example
+## Examples
+
+### Default Example
 
 <Canvas of={Title.Primary} />
 
 ## Usage
 
-```ts
-/* eslint-disable react/prop-types */
-import React from "react";
-import Title from "../title";
+To use the `Title` component in your project, import it from the components library and use it as shown below:
 
-const Example = ({ text }) => {
+```tsx
+import { Title } from "components-library";
+
+const Example = () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100%",
-        width: "100%",
-      }}
-    >
-      <Title text={text} />
-    </div>
+    <Title
+      text="Title"
+    />
   );
 };
 
 export default Example;
-```
-
-#### Arguments
-
-- **text** _`string`_ - A string that represents the text content of the button.
