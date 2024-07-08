@@ -18,9 +18,9 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "prepare": "npm run build",
-    "publish:major": "npm version major && git push origin main --follow-tags",
-    "publish:minor": "npm version minor && git push origin main --follow-tags",
-    "publish:patch": "npm version patch && git push origin main --follow-tags"
+    "publish:major": "npm version major && git push origin master --follow-tags",
+    "publish:minor": "npm version minor && git push origin master --follow-tags",
+    "publish:patch": "npm version patch && git push origin master --follow-tags"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
