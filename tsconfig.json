@@ -23,12 +23,5 @@
     "allowJs": true, // Allows importing and using JavaScript files.
     "checkJs": false // Disables type checking on JavaScript files (optional, based on project needs).
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.js",
-    "src/**/*.jsx",
-    "lib"
-  ], // Specifies the directory to include when searching for TypeScript files.
-  "exclude": ["src/**/__docs__", "src/**/__test__"]
+  "include": ["lib/**/*.ts", "lib/**/*.tsx", "lib/**/*.js", "lib/**/*.jsx"] // Specifies the directory to include when searching for TypeScript files.
 }

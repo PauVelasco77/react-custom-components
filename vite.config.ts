@@ -10,7 +10,11 @@ import { libInjectCss } from "vite-plugin-lib-inject-css";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), libInjectCss(), dts({ include: ["lib"] })],
+  plugins: [
+    react(),
+    libInjectCss(),
+    dts({ include: ["lib"], exclude: ["**/__docs__/**", "**/__test__/**"] }),
+  ],
   build: {
     copyPublicDir: false,
     lib: {
@@ -23,7 +27,7 @@ export default defineConfig({
         // https://rollupjs.org/configuration-options/#input
         glob
           .sync("lib/**/*.{ts,tsx}", {
-            ignore: ["lib/**/*.d.ts"],
+            ignore: ["lib/**/*.d.ts", "**/__docs__/**", "**/__test__/**"],
           })
           .map((file) => [
             // 1. The name of the entry point
