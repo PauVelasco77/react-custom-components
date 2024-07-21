@@ -1,8 +1,7 @@
-/* eslint-disable react/prop-types */
-import React from "react";
-import Title from "../title";
+import { FC } from "react";
+import Button, { ButtonProps } from "../button";
 
-const Example = ({ text }) => {
+const Example: FC<ButtonProps> = ({ text = "Button" }) => {
   return (
     <div
       style={{
@@ -13,7 +12,7 @@ const Example = ({ text }) => {
         width: "100%",
       }}
     >
-      <Title text={text} />
+      <Button text={text} />
     </div>
   );
 };
