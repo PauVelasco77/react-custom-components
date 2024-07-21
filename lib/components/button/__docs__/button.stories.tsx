@@ -11,11 +11,11 @@ type Story = StoryObj<typeof Example>;
 
 export const Primary: Story = {
   args: {
-    text: "Button",
+    children: "Button",
   },
 };
 export const Secondary: Story = {
   args: {
-    text: "Button Secondary",
+    children: "Button Secondary",
   },
 };

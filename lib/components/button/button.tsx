@@ -1,17 +1,16 @@
-import { DetailedHTMLProps } from "react";
 import styles from "./button.module.css";
 
-export type ButtonProps = DetailedHTMLProps<
-  React.ButtonHTMLAttributes<HTMLButtonElement>,
-  HTMLButtonElement
-> & {
-  text: string;
+type ButtonProps = React.ComponentPropsWithoutRef<"button"> & {
+  children: React.ReactNode;
 };
 
-export default function Button({ text, ...props }: ButtonProps): JSX.Element {
+export default function Button({
+  children,
+  ...rest
+}: ButtonProps): JSX.Element {
   return (
-    <button className={styles.button} {...props}>
-      {text}
+    <button className={styles.button} {...rest}>
+      {children}
     </button>
   );
 }
