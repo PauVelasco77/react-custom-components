@@ -1,3 +1,5 @@
+/// <reference types="vitest" />
+
 import { defineConfig } from "vite";
 import { extname, relative, resolve } from "path";
 import { fileURLToPath } from "node:url";
@@ -16,7 +18,7 @@ export default defineConfig({
       formats: ["es"],
     },
     rollupOptions: {
-      external: ["react", "react/jsx-runtime"],
+      external: ["react", "react/jsx-runtime", "react-dom"],
       input: Object.fromEntries(
         // https://rollupjs.org/configuration-options/#input
         glob
@@ -37,5 +39,24 @@ export default defineConfig({
         entryFileNames: "[name].js",
       },
     },
+  },
+  test: {
+    globals: true,
+    environment: "jsdom",
+    setupFiles: "./setupTests.ts",
+    coverage: {
+      provider: "v8",
+      reporter: ["text", "json", "html"],
+      exclude: ["**/__docs__/**", "**/__test__/**"],
+      include: ["lib/**/*.{ts,tsx}"],
+    },
+    include: ["**/*.{test,spec}.?(c|m)[jt]s?(x)"],
+    exclude: [
+      "**/node_modules/**",
+      "**/dist/**",
+      "**/cypress/**",
+      "**/.{idea,git,cache,output,temp}/**",
+      "**/{karma,rollup,webpack,vite,vitest,jest,ava,babel,nyc,cypress,tsup,build,eslint,prettier}.config.*",
+    ],
   },
 });
