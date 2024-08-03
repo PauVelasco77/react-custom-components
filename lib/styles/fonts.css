@@ -1,0 +1,26 @@
+/* Fonts */
+:root {
+  --font-family-base: "Roboto", system, sans-serif;
+  --font-family-brand: "BwGradual", system, sans-serif;
+
+  /* Font Size */
+  --font-size-5xl: 64px;
+  --font-size-4xl: 48px;
+  --font-size-3xl: 40px;
+  --font-size-2xl: 32px;
+  --font-size-xl: 24px;
+  --font-size-l: 20px;
+  --font-size-m: 16px;
+  --font-size-s: 14px;
+  --font-size-xs: 12px;
+
+  /* Font Weight */
+  --font-weight-bold: 700;
+  --font-weight-medium: 500;
+  --font-weight-regular: 300;
+
+  /* Line height */
+  --line-height-large: 1.5;
+  --line-height-medium: 1.25;
+  --line-height-small: 1;
+}

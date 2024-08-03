@@ -1,0 +1,97 @@
+/* stylelint-disable function-calc-no-invalid */
+:root {
+  /* Colors */
+  --color-primary: #2020df;
+  --color-primary-strong: #8f8fef;
+  --color-primary-soft: #101070;
+
+  /* accent */
+  --color-accent: #f20d92;
+  --color-accent-strong: #ff91d1;
+  --color-accent-soft: #61053b;
+
+  /* tut color */
+  --color-tut: #00f;
+  --color-tut-strong: #0000a8;
+  --color-tut-soft: #a0a0ff;
+  --color-tut-surface: #f0f0ff;
+
+  /* gray */
+  --color-gray: #c4c4c4;
+  --color-gray-soft: #55555d;
+  --color-gray-strong: #19191f;
+
+  /* generics */
+  --color-background: #ececee;
+  --color-surface: #f6f6f8;
+  --color-surface-2: #dcdce0;
+  --color-surface-3: #d4d4d9;
+  --color-white: #fff;
+  --color-black: #000;
+
+  /* Text Colors */
+  --color-text: var(--color-gray-soft);
+  --color-text-highlighted: var(--color-gray-strong);
+  --color-text-on-primary: var(--color-white);
+  --color-text-on-accent: var(--color-white);
+  --color-text-on-warning: var(--color-black);
+  --color-text-on-warning-container: #fefec3;
+  --color-text-on-success: var(--color-black);
+  --color-text-on-success-container: #d6ffe1;
+  --color-text-on-error: var(--color-white);
+  --color-text-on-error-container: #b91c1c;
+
+  /* stateful */
+  --color-info: #2094f3;
+  --color-success: #05fa46;
+  --color-success-container: #d6ffe1;
+  --color-success-strong: #79fc9c;
+  --color-warning: #fadf15;
+  --color-warning-container: #fefec3;
+  --color-error: #dc2626;
+  --color-error-container: #fee2e2;
+  --color-error-strong: #ff5724;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(
+    180deg,
+    #5561ff 0%,
+    #3643fc 100%,
+    #3643fc 100%
+  );
+
+  /* Text Content */
+  --text-content: #01011c;
+  --text-content-soft: #717185;
+
+  [theme-mode="dark"] {
+    /* Colors */
+
+    /* primary */
+    --color-primary: #8f8fef;
+    --color-primary-strong: #2020df;
+    --color-primary-soft: #101070;
+
+    /* accent */
+    --color-accent: #ff91d1;
+    --color-accent-strong: #f20d92;
+    --color-accent-soft: #61053b;
+
+    /* gray */
+    --color-gray: #6b6b91;
+    --color-gray-soft: #c2cad6;
+    --color-gray-strong: #e5ecf2;
+
+    /* generics */
+    --color-text: var(--color-gray-soft);
+    --color-text-highlighted: var(--color-gray-strong);
+    --color-background: #01011c;
+    --color-surface: #131339;
+    --color-surface-2: #26264c;
+    --color-surface-3: #336;
+
+    /* stateful */
+    --color-error: #ff5724;
+    --color-error-strong: #dc2626;
+  }
+}
