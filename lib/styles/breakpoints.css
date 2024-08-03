@@ -1,0 +1,14 @@
+:root {
+  /* min-width */
+  --min-tablet: 744px;
+  --min-desktop: 1024px;
+  --min-desktop-lg: 1360px;
+  --min-wide: 1728px;
+
+  /* container-width */
+  --container-mobile-width: calc(100% - var(--size-xl));
+  --container-tablet-width: calc(var(--min-tablet) - var(--size-xl));
+  --container-desktop-width: calc(var(--min-desktop) - var(--size-xl));
+  --container-desktop-lg-width: 1090px;
+  --container-wide-width: 1396px;
+}
