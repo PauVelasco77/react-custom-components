@@ -1,0 +1,49 @@
+.switchContainer {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: fit-content;
+  border: 3px solid var(--color-primary);
+  border-radius: 20px;
+  background: var(--color-primary);
+  font-weight: bold;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+.switchContainer::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 0%;
+  border-radius: 20px;
+  background: var(--color-white);
+  transition: all 0.3s;
+}
+.switchCheckbox:checked + .switchContainer::before {
+  left: 50%;
+}
+.switchContainer span {
+  padding: 6px;
+  text-align: center;
+  z-index: 1;
+}
+.switchCheckbox {
+  display: none;
+}
+.switchCheckbox:checked + .switchContainer span:first-child {
+  color: var(--color-white);
+  transition: color 0.3s;
+}
+.switchCheckbox:checked + .switchContainer span:last-child {
+  color: var(--color-primary);
+  transition: color 0.3s;
+}
+.switchCheckbox + .switchContainer span:first-child {
+  color: var(--color-primary);
+  transition: color 0.3s;
+}
+.switchCheckbox + .switchContainer span:last-child {
+  color: var(--color-white);
+  transition: color 0.3s;
+}
