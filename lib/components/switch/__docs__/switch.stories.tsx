@@ -4,6 +4,9 @@ import Switch from "../switch";
 const meta: Meta<typeof Switch> = {
   title: "Switch",
   component: Switch,
+  parameters: {
+    layout: "centered",
+  },
 };
 
 export default meta;
