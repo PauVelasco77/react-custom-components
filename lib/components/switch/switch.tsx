@@ -16,18 +16,18 @@ export default function Switch<T extends React.ReactNode>({
   ...rest
 }: SwitchProps<T>): JSX.Element {
   const switchContainerClasses = cx(styles.switchContainer, {
-    [styles.switchContainerAdvanced]: variant === "advanced",
+    [styles.advanced]: variant === "advanced",
   });
 
   return (
     <span>
       <input
         type="checkbox"
-        id="toggle"
+        id={rest.id ?? "toggle"}
         className={styles.switchCheckbox}
         {...rest}
       />
-      <label htmlFor="toggle" className={switchContainerClasses}>
+      <label htmlFor={rest.id ?? "toggle"} className={switchContainerClasses}>
         <span>{selectedOption}</span>
         <span>{unselectedOption}</span>
       </label>
