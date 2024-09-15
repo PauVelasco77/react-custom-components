@@ -1,0 +1,19 @@
+.select {
+  background: url("selectIcon.svg") no-repeat;
+  background-position: calc(100% - 0.5rem) center !important;
+  -moz-appearance: none !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  padding-right: 2rem !important;
+  background-color: var(--color-surface-200);
+  border: var(--border-width-s) solid var(--color-primary-100);
+  cursor: pointer;
+  font-family: var(--font-family-brand);
+  padding: var(--size-2xs) 0 var(--size-2xs) var(--size-2xs);
+  border-radius: var(--border-radius-s);
+  color: var(--color-text);
+}
+
+.select:focus-within {
+  outline: none !important;
+}
