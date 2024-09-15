@@ -1,0 +1,36 @@
+.container {
+  display: grid;
+  grid-auto-columns: auto;
+  grid-auto-rows: 80px;
+  grid-gap: var(--size-xs);
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.iconContainer {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.icon {
+  align-items: center;
+  display: flex;
+  height: var(--size-xl);
+  justify-content: center;
+  width: var(--size-xl);
+  border: 1px solid black;
+}
+
+.label {
+  font-family: var(--font-family-brand);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  margin-top: var(--size-xs);
+}
+
+.iconContainer:hover .icon,
+.iconContainer:hover .label {
+  color: var(--color-primary);
+}
