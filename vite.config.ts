@@ -48,10 +48,15 @@ export default defineConfig({
     globals: true,
     environment: "jsdom",
     setupFiles: "./setupTests.ts",
+    css: {
+      modules: {
+        classNameStrategy: "non-scoped",
+      },
+    },
     coverage: {
       provider: "v8",
       reporter: ["text", "json", "html"],
-      exclude: ["**/__docs__/**", "**/__test__/**"],
+      exclude: ["**/__docs__/**", "**/__tests__/**"],
       include: ["lib/**/*.{ts,tsx}"],
     },
     include: ["**/*.{test,spec}.?(c|m)[jt]s?(x)"],
