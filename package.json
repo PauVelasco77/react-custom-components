@@ -13,7 +13,8 @@
     "lint": "eslint . --ext .ts,.tsx --ignore-path .gitignore --fix",
     "build": "tsc --p ./tsconfig-build.json && vite build",
     "test": "vitest --run",
-    "test-watch": "vitest",
+    "coverage": "vitest --coverage",
+    "watch-test": "vitest",
     "test:ui": "vitest --ui",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
@@ -50,6 +51,7 @@
     "@typescript-eslint/eslint-plugin": "^7.15.0",
     "@typescript-eslint/parser": "^7.15.0",
     "@vitejs/plugin-react": "^4.3.1",
+    "@vitest/coverage-v8": "^2.0.5",
     "classnames": "^2.5.1",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
@@ -67,7 +69,7 @@
     "vite": "^5.3.3",
     "vite-plugin-dts": "^3.9.1",
     "vite-plugin-lib-inject-css": "^2.1.1",
-    "vitest": "^1.6.0"
+    "vitest": "^2.0.2"
   },
   "peerDependencies": {
     "react": "^18.3.1"
