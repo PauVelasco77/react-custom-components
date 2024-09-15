@@ -1,0 +1,17 @@
+@font-face {
+  font-family: BwGradual;
+  src: url("https://d1ddeojt5lrj1t.cloudfront.net/fonts/BwGradualRegular/BwGradual-Regular.woff")
+    format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: BwGradual;
+  src: url("https://d1ddeojt5lrj1t.cloudfront.net/fonts/BwGradualMedium/BwGradual-Medium.woff")
+    format("woff");
+  font-style: medium;
+  font-weight: 500;
+  font-display: swap;
+}
