@@ -1,15 +1,11 @@
 import React from "react";
 import type { Preview } from "@storybook/react";
-import { themes } from "@storybook/theming";
 import "../lib/styles/index.css";
-import ThemeDecorator from "./decorators/themeDecorator";
+import "./storybook.setup";
 
 const preview: Preview = {
-  decorators: [(Story, context) => ThemeDecorator(Story, context)],
+  tags: ["autodocs"],
   parameters: {
-    docs: {
-      theme: themes.light,
-    },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -37,6 +33,24 @@ const preview: Preview = {
           },
         ],
         dynamicTitle: true,
+      },
+    },
+  },
+  decorators: [
+    (Story, context) => {
+      const { theme } = context.globals;
+      console.log("theme", theme);
+      return (
+        <div className={theme} theme-mode={theme}>
+          <Story />
+        </div>
+      );
+    },
+  ],
+  argTypes: {
+    className: {
+      control: {
+        type: "text",
       },
     },
   },
