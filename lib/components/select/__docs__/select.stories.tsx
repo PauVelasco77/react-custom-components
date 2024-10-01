@@ -64,3 +64,26 @@ export const WithFixedPlaceholder: Story = {
     ],
   },
 };
+
+export const WithNumbers: Story = {
+  args: {
+    options: [
+      {
+        value: 5,
+        children: "10",
+      },
+      {
+        value: 10,
+        children: "10",
+      },
+      {
+        value: 20,
+        children: "20",
+      },
+      {
+        value: 30,
+        children: "30",
+      },
+    ],
+  },
+};

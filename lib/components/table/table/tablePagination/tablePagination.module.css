@@ -1,0 +1,11 @@
+.tablePagination {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--size-m) var(--size-l);
+}
+
+.rowSelectContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--size-xs);
+}

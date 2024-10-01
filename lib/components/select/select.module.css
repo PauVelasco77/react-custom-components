@@ -4,7 +4,7 @@
   -moz-appearance: none !important;
   -webkit-appearance: none !important;
   appearance: none !important;
-  padding-right: 2rem !important;
+  padding-right: 1.7rem !important;
   background-color: var(--color-surface-200);
   border: var(--border-width-s) solid var(--color-primary-100);
   cursor: pointer;
@@ -12,6 +12,7 @@
   padding: var(--size-2xs) 0 var(--size-2xs) var(--size-2xs);
   border-radius: var(--border-radius-s);
   color: var(--color-text);
+  text-align: center;
 }
 
 .select:focus-within {
