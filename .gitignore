@@ -5,3 +5,5 @@ dist
 storybook-static
 
 *storybook.log
+
+coverage
