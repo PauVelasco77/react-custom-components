@@ -1,6 +1,8 @@
+/** Components */
 export * from "./components/customIcon/customIcon";
 export * from "./components/loader/loader";
 
+/** Assets */
 export * from "./assets/chevronDown";
 export * from "./assets/chevronLeft";
 export * from "./assets/chevronRight";
