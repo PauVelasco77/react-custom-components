@@ -1,4 +1,4 @@
-import Icon from "../icon";
+import CustomIcon from "../components/customIcon/customIcon";
 import * as icons from "../index";
 import styles from "./index.module.css";
 
@@ -9,7 +9,7 @@ export default function Example(): JSX.Element {
         return (
           <div key={i} className={styles.iconContainer}>
             <div className={styles.icon}>
-              <Icon iconName={icon as keyof typeof icons} />
+              <CustomIcon iconName={icon as keyof typeof icons} />
             </div>
             <span className={styles.label}>
               {icon.replace(/([A-Z])/g, " $1").trim()}

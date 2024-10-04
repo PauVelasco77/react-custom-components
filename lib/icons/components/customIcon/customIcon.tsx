@@ -1,18 +1,23 @@
 import { memo } from "react";
-import * as Icons from "./index";
+import cx from "classnames";
+import * as Icons from "../../index";
 
-type IconProps = React.SVGProps<SVGSVGElement> & {
+export type IconProps = React.SVGProps<SVGSVGElement> & {
   size?: number | "auto";
   iconName: keyof typeof Icons;
+  className?: string;
 };
 
-const Icon = memo(function Icon({
+const CustomIcon = memo(function Icon({
   size = "auto",
   iconName,
+  className,
   ...props
 }: IconProps): JSX.Element {
+  const classNames = cx(className);
   return (
     <svg
+      className={classNames}
       viewBox="0 0 16 16"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
@@ -25,4 +30,4 @@ const Icon = memo(function Icon({
   );
 });
 
-export default Icon;
+export default CustomIcon;
