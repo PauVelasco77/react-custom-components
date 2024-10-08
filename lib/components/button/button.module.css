@@ -1,9 +1,104 @@
 .button {
-  background-color: yellow;
-  height: 100px;
-  border: 3px solid black;
-  border-radius: 10px;
-  font-size: 20px;
-  color: black;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-medium);
+  padding: var(--size-xs) var(--size-m);
+  border-radius: calc(var(--border-radius-m) - var(--size-3xs));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-m);
+  text-align: center;
+  height: var(--size-lg);
+}
 
+.button:disabled,
+.button:disabled:active {
+  cursor: not-allowed;
+  opacity: var(--opacity-disabled);
+}
+
+.primary {
+  color: var(--primary-foreground);
+  background: var(--primary);
+}
+
+.primary:active {
+  opacity: var(--hover-opacity);
+}
+
+.secondary {
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+}
+
+.secondary:active {
+  opacity: var(--hover-opacity);
+  opacity: var(--opacity-hover);
+}
+
+.destructive {
+  color: var(--destructive-foreground);
+  background: var(--destructive);
+}
+
+.destructive:active {
+  opacity: var(--hover-opacity);
+}
+
+.outline {
+  color: var(--primary);
+  border: var(--size-4xs) solid var(--input);
+  background: transparent;
+}
+
+.outline:hover {
+  background-color: var(--accent);
+}
+
+.outline:active {
+  color: var(--accent-foreground);
+  background-color: var(--accent);
+}
+
+.ghost {
+  color: var(--primary);
+  background: transparent;
+  transition: text-decoration-color 300ms;
+}
+
+.ghost:active {
+  background: var(--accent);
+}
+
+.link {
+  color: var(--primary);
+  text-decoration: underline auto transparent;
+  text-underline-offset: 0.2em;
+  transition: text-decoration-color 300ms;
+}
+
+.link:hover {
+  text-decoration-color: var(--primary);
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: var(--size-4xs) solid var(--input);
+  background-color: var(--background);
+  padding: var(--size-xs);
+  box-sizing: border-box;
+  aspect-ratio: 1;
+}
+
+.icon:hover {
+  background-color: var(--accent);
+}
+
+.icon:active {
+  background-color: var(--accent);
 }
