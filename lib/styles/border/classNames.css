@@ -1,0 +1,24 @@
+/* No border */
+.border-none {
+  border: var(--border-none) solid transparent;
+}
+
+/* Thin border */
+.border-thin {
+  border: var(--border-thin) solid;
+}
+
+/* Medium border */
+.border-medium {
+  border: var(--border-medium) solid;
+}
+
+/* Thick border */
+.border-thick {
+  border: var(--border-thick) solid;
+}
+
+/* Extra Thick border */
+.border-extra-thick {
+  border: var(--border-extra-thick) solid;
+}
