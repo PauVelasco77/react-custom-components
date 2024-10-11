@@ -1,0 +1,29 @@
+/* No gap */
+.gap-none {
+  gap: var(--gap-none);
+}
+
+/* Extra Small gap */
+.gap-extra-small {
+  gap: var(--gap-extra-small);
+}
+
+/* Small gap */
+.gap-small {
+  gap: var(--gap-small);
+}
+
+/* Medium gap */
+.gap-medium {
+  gap: var(--gap-medium);
+}
+
+/* Large gap */
+.gap-large {
+  gap: var(--gap-large);
+}
+
+/* Extra Large gap */
+.gap-extra-large {
+  gap: var(--gap-extra-large);
+}
