@@ -11,6 +11,17 @@ const preview: Preview = {
         color: /(background|color)$/i,
         date: /Date$/i,
       },
+      backgrounds: {
+        values: [
+          // 👇 Default values
+          { name: "Dark", value: "var(--color-surface-100)" },
+          { name: "light", value: "#F7F9F2" },
+          // 👇 Add your own
+          { name: "Maroon", value: "#400" },
+        ],
+        // 👇 Specify which background is shown by default
+        default: "Maroon",
+      },
     },
   },
   globalTypes: {
