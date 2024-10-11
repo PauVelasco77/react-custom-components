@@ -1,0 +1,13 @@
+:root {
+  --md-sys-opacity-0: 0;
+  --md-sys-opacity-10: 0.1;
+  --md-sys-opacity-20: 0.2;
+  --md-sys-opacity-30: 0.3;
+  --md-sys-opacity-40: 0.4;
+  --md-sys-opacity-50: 0.5;
+  --md-sys-opacity-60: 0.6;
+  --md-sys-opacity-70: 0.7;
+  --md-sys-opacity-80: 0.8;
+  --md-sys-opacity-90: 0.9;
+  --md-sys-opacity-100: 1;
+}
