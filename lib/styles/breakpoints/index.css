@@ -1,0 +1,8 @@
+:root {
+  --breakpoint-xs: 0px; /* Extra Small devices (phones, 0px and up) */
+  --breakpoint-sm: 576px; /* Small devices (tablets, 576px and up) */
+  --breakpoint-md: 768px; /* Medium devices (small laptops, 768px and up) */
+  --breakpoint-lg: 992px; /* Large devices (desktops, 992px and up) */
+  --breakpoint-xl: 1200px; /* Extra Large devices (large desktops, 1200px and up) */
+  --breakpoint-xxl: 1400px; /* Extra Extra Large devices (very large desktops, 1400px and up) */
+}
