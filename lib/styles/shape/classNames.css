@@ -1,0 +1,34 @@
+/* No corners */
+.corner-none {
+  border-radius: var(--shape-corner-none);
+}
+
+/* Extra Small corners */
+.corner-extra-small {
+  border-radius: var(--shape-corner-extra-small);
+}
+
+/* Small corners */
+.corner-small {
+  border-radius: var(--shape-corner-small);
+}
+
+/* Medium corners */
+.corner-medium {
+  border-radius: var(--shape-corner-medium);
+}
+
+/* Large corners */
+.corner-large {
+  border-radius: var(--shape-corner-large);
+}
+
+/* Extra Large corners */
+.corner-extra-large {
+  border-radius: var(--shape-corner-extra-large);
+}
+
+/* Full (circular) corners */
+.corner-full {
+  border-radius: var(--shape-corner-full);
+}
