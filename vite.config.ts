@@ -1,71 +1,56 @@
-/// <reference types="vitest" />
-
-import { defineConfig } from "vite";
-import { extname, relative, resolve } from "path";
-import { fileURLToPath } from "node:url";
-import { glob } from "glob";
+import {coverageConfigDefaults, defineConfig} from "vitest/config";
 import react from "@vitejs/plugin-react";
 import dts from "vite-plugin-dts";
-import { libInjectCss } from "vite-plugin-lib-inject-css";
+import {resolve} from "path";
+import {peerDependencies} from "./package.json";
+import {libInjectCss} from "vite-plugin-lib-inject-css";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react(),
     libInjectCss(),
-    dts({ include: ["lib"], exclude: ["**/__docs__/**", "**/__test__/**"] }),
+    dts({
+      tsconfigPath: "./tsconfig.app.json",
+      include: ["src/**/*.ts", "src/**/*.tsx"],
+      exclude: ["**/*.stories.ts", "**/*.test.tsx", ".storybook/**/*"],
+    }),
+    //dts({
+    //  include: ["src/**/*.ts", "src/**/*.tsx"],
+    //  exclude: ["src/**/*.test.tsx", "src/**/*.stories.tsx"],
+    //  insertTypesEntry: true,
+    //  tsconfigPath: "./tsconfig.app.json",
+    //  rollupTypes: true,
+    //}),
   ],
   build: {
-    copyPublicDir: false,
     lib: {
-      entry: resolve(__dirname, "lib/main.ts"),
+      entry: resolve(__dirname, "src/index.ts"),
+      name: "pau-react-custom-components",
+      fileName: "rcc",
       formats: ["es"],
     },
     rollupOptions: {
-      external: ["react", "react/jsx-runtime", "react-dom"],
-      input: Object.fromEntries(
-        // https://rollupjs.org/configuration-options/#input
-        glob
-          .sync("lib/**/*.{ts,tsx}", {
-            ignore: ["lib/**/*.d.ts", "**/__docs__/**", "**/__test__/**"],
-          })
-          .map((file) => [
-            // 1. The name of the entry point
-            // lib/nested/foo.js becomes nested/foo
-            relative("lib", file.slice(0, file.length - extname(file).length)),
-            // 2. The absolute path to the entry file
-            // lib/nested/foo.ts becomes /project/lib/nested/foo.ts
-            fileURLToPath(new URL(file, import.meta.url)),
-          ]),
-      ),
-      output: {
-        assetFileNames: "assets/[name][extname]",
-        entryFileNames: "[name].js",
+      input: {
+        index: resolve(__dirname, "src/index.ts"),
       },
+      external: Object.keys(peerDependencies),
+      output: {globals: {react: "React", "react-dom": "ReactDOM"}},
     },
   },
   test: {
-    globals: true,
-    environment: "jsdom",
-    setupFiles: "./setupTests.ts",
-    css: {
-      modules: {
-        classNameStrategy: "non-scoped",
-      },
-    },
+    globals: true, // Enables global `test`, `expect`, etc.
+    environment: "jsdom", // 👈 Ensures a browser-like environment
+    setupFiles: "./setupTests.ts", // 👈 Ensures setupTests.ts is loaded
     coverage: {
-      provider: "v8",
-      reporter: ["text", "json", "html"],
-      exclude: ["**/__docs__/**", "**/__tests__/**"],
-      include: ["lib/**/*.{ts,tsx}"],
+      // 👇 Add this
+      exclude: [
+        ...coverageConfigDefaults.exclude,
+        "**/.storybook/**",
+        // 👇 This pattern must align with the `stories` property of your `.storybook/main.ts` config
+        "**/*.stories.*",
+        // 👇 This pattern must align with the output directory of `storybook build`
+        "**/storybook-static/**",
+      ],
     },
-    include: ["**/*.{test,spec}.?(c|m)[jt]s?(x)"],
-    exclude: [
-      "**/node_modules/**",
-      "**/dist/**",
-      "**/cypress/**",
-      "**/.{idea,git,cache,output,temp}/**",
-      "**/{karma,rollup,webpack,vite,vitest,jest,ava,babel,nyc,cypress,tsup,build,eslint,prettier}.config.*",
-    ],
   },
 });
