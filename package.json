@@ -13,7 +13,6 @@
     "ts:check": "tsc --noEmit",
     "build": "tsc && vite build",
     "watch-build": "tsc && vite build --watch",
-    "phoenix": "rm -Rf node_modules yarn.lock && yarn",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test": "vitest --environment jsdom",
