@@ -19,9 +19,9 @@
     "build-storybook": "storybook build",
     "test": "vitest --environment jsdom",
     "coverage": "vitest --coverage",
-    "publish:major": "yarn version major && git push origin master --follow-tags",
+    "publish": "yarn version --patch && git push origin master --follow-tags",
     "publish:minor": "yarn version minor && git push origin master --follow-tags",
-    "publish:patch": "yarn version patch && git push origin master --follow-tags"
+    "publish:patch": "yarn version --patch && git push origin master --follow-tags"
   },
   "peerDependencies": {
     "react": ">=18.0.0",
