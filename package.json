@@ -12,14 +12,15 @@
     "lint": "eslint .",
     "ts:check": "tsc --noEmit",
     "build": "tsc && vite build",
+    "phoenix": "rm -Rf node_modules yarn.lock && yarn",
     "watch-build": "tsc && vite build --watch",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test": "vitest --environment jsdom",
     "coverage": "vitest --coverage",
-    "publish:major": "npm version major && git push origin master --follow-tags",
-    "publish:minor": "npm version minor && git push origin master --follow-tags",
-    "publish:patch": "npm version patch && git push origin master --follow-tags"
+    "publish:major": "yarn version major && git push origin master --follow-tags",
+    "publish:minor": "yarn version minor && git push origin master --follow-tags",
+    "publish:patch": "yarn version patch && git push origin master --follow-tags"
   },
   "peerDependencies": {
     "react": ">=18.0.0",
